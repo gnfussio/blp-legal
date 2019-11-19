@@ -1,0 +1,427 @@
+@import "compass/css3";
+@import "mixins.scss";
+
+@media only screen and (min-width: 1440px) {
+
+}
+
+@media only screen and (max-width: 1440px) { // Laptop L
+		.wrapSliderTit {
+			  left: 15.6%!important;
+		}
+}
+@media only screen and (max-width: 1024px) { // Laptop L
+		.wrapSliderTit {
+			  left: 5.5%!important;
+		}
+}
+@media only screen and (max-width: 1200px) { // Laptop
+
+	.fixed {
+	  width: 294px!important;
+	}
+	.wrapbloques{
+		.block{
+			img{
+				max-width: 490px!important;
+			}
+			.cuadrosost{
+				width: 490px;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 1024px) { // Laptop
+	.wrapbloques{
+		.block{
+			img{
+				max-width: 400px!important;
+			}
+			.cuadrosost{
+				width: 400px;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 992px) {
+	#block-block-2, #block-block-18{
+    display: none!important;
+  }
+  #block-block-19{
+    display: block!important;
+  }
+	#block-search-form{
+	  float: inherit!important;
+	}
+	.view-noticias{
+	  .views-row{
+	    width: 45%!important;
+		}
+	}
+
+	.lineaBlanca{
+	  top: 80%!important;
+	}
+
+	.fieldset-wrapper{
+		  width: 100%!important;
+			.field-name-field-nombre-del-abogado,
+				.field-name-field-cargo{
+					margin-left: 55%!important;
+				}
+		.field-name-field-puesto,
+	  .field-name-field-tel-ono,
+	  .field-name-field-correo-electronico,
+	  .field-name-field-v-card,
+	  .field-name-field-pais{
+	    margin-left: 60%!important;
+	  }
+	}
+	.pfixed{
+	  position: inherit!important;
+	}
+	#block-block-20{
+	margin: 20px auto;
+	}
+
+	#footer{
+	  .row{
+	    display: block!important;
+	    .col-md-3:nth-child(1),
+	    .col-md-3:nth-child(2),
+	    .col-md-3:nth-child(3){
+	      border-right: none!important;
+	    }
+	    .col-md-3{
+				p, ul li{
+					text-align: center!important;
+				}
+				.wrapRedesSociales{
+					@include justify-content(center!important);
+				}
+	    }
+	  }
+	}
+}
+
+@media only screen and (min-width: 769px) {
+ 	#block-block-36{ // block en sostenibilidad
+		display: none!important;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.wrapSliderTit {
+			left:10%!important;
+			text-align: left!important;
+	}
+
+	#main{
+		margin-top: 0!important;
+	}
+
+	section.localespaises {
+		article.localesPais {
+			.mapas {
+				.item {
+					width: 100%!important;
+				}
+			}
+		}
+	}
+
+	.field-name-field-foto{
+		margin: 0 auto!important;
+		width: 100%!important;
+		max-width: 300px;
+		img{
+			min-width: 290px;
+		}
+	}
+	.group-main-wrapper-abogado {
+		.group-perfil-abogado-top{
+			position: inherit!important;
+		}
+
+		.fieldset-wrapper{
+				width: 100%!important;
+				.field-name-field-nombre-del-abogado,
+					.field-name-field-cargo{
+						margin-left: 0%!important;
+					}
+			.field-name-field-puesto,
+			.field-name-field-tel-ono,
+			.field-name-field-correo-electronico,
+			.field-name-field-v-card,
+			.field-name-field-pais{
+				margin-left: 5%!important;
+			}
+		}
+	}
+
+	.block-simplenews{
+	  .simplenews-subscribe{
+	    > div{
+	      display: block!important;
+			}
+		}
+		input{
+			display:block!important;
+			margin: 0 auto!important;
+		}
+	}
+	#footer{
+		#block-block-5,
+		#block-block-6,
+		#block-block-7{
+			margin-bottom: 30px;
+		}
+		nav ul li {
+		    text-align: center!important;
+				padding: 6px 0;
+				border-bottom: solid 1px $blanco;
+		}
+		.wrapRedesSociales{
+			@include justify-content(center!important)
+		}
+	}
+	#block-block-8{
+		text-align: center;
+	}
+	#block-block-7 p{
+		text-align: center!important;
+	}
+	figure.mensajeprincipal{
+		font-size: 1.4em!important;
+		p{
+			img{
+				width: 30px!important;
+			}
+		}
+	}
+	.tresItemsFront .item{
+		margin-bottom: 30px;
+		span, strong{
+			font-size: 1em!important;
+			line-height: 5px!important;
+		}
+	}
+	.headBlock{
+		display: block;
+		position: inherit!important;
+		color: $azul!important;
+		margin: 40px 0 0 30px!important;
+	}
+	.view-noticias-page {
+		.view-content{
+			position: inherit!important;
+			display: block!important;
+		}
+	}
+	.masonry-item.views-row {
+	    position: inherit!important;
+	    margin: 0 0 30px 0!important;
+	    display: block!important;
+	    width: 100%!important;
+			top:inherit!important;
+			left: inherit!important;
+			.views-field-view-node{
+				span{
+					a{
+						font-size: 1.5em!important;
+						color: $blanco!important;
+						background: $verde;
+						padding: 8px 12px;
+						@include border-radius(6px);
+					}
+				}
+			}
+	}
+	.view-blog .view-content .views-field-field-texto p a{
+		font-size: 1.5em!important;
+		color: $blanco!important;
+		display: inline-block!important;
+		background: $verde;
+		padding: 8px 12px;
+		@include border-radius(6px);
+	}
+
+	.lineaBlanca{
+	  display:none!important;
+	}
+
+	.view-noticias-page {
+	  .view-content{
+	    .views-row{
+				width: 100%!important;
+			}
+		}
+	}
+
+	// filtrados en visitantes
+
+		.view-abogados{
+			.view-filters{
+				.views-exposed-widgets {
+					display: block!important;
+					.views-exposed-widget{
+						width: 100%!important;
+					}
+				}
+			}
+		}
+
+		// sostenibilidad
+
+		#block-block-22{
+			display: none!important;
+		}
+
+		.wrapbloquesMovil{
+			.img-parallax {
+			    z-index: inherit!important;
+			    position: inherit!important;
+			}
+			.block{
+				margin-bottom: 20px;
+				img{
+					@include wyh;
+				}
+				.cuadrosost{
+					width: 100%!important;
+				}
+				article.sostxtx div{
+					width: 100%!important;
+				}
+			}
+			.botonesp a{
+				font-size: 12px!important;
+				max-width: 370px!important;
+			}
+		}
+
+}
+
+@media only screen and (max-width: 480px){
+	#block-block-20{
+		display: none!important;
+	}
+
+	// Boletín
+	#block-simplenews-57{
+	  h2{
+	   	background: none!important;
+	    font-size: 1.2em;
+	  }
+	}
+
+	#block-block-3{
+	  margin: 60px 0;
+	  h1 strong{
+	    font-size: 0.6em!important;
+	  }
+		.mensajeprincipal p{
+			font-size: 0.7em!important;
+			img{
+				width: 18px!important
+			}
+		}
+	}
+
+	.contextual-links-region h2{
+		font-size: 1em!important;
+	}
+
+	#block-views-noticias-block h2{
+		font-size: 1.4em!important;
+		padding: 10px!important;
+	}
+
+	.block-simplenews p{
+		font-size: 1em!important;
+	}
+
+	.view-blog,
+	.view-blog-brand-360,
+	.field-name-blog-humanizando-mentes {
+	  .views-exposed-widgets{
+			display: block!important;
+		}
+	}
+
+		article.sostxtx div {
+		    width: 100%!important;
+		}
+		.wrapbloques{
+			.block{
+				height: inherit!important;
+				overflow: inherit!important;
+				.cuadrosost{
+					display: none!important;
+				}
+				.img-parallax{
+					position: inherit!important;
+					 display: block!important;
+				}
+			}
+		}
+
+	.views-field.views-field-field-foto {
+    float: left;
+    width: 90px;
+    margin: 10px;
+	}
+
+	.field-name-field-foto{
+		img{
+			width: 100%!important;
+		}
+	}
+
+	.field-name-field-cv-completo {
+	    width: 100%!important;
+	    margin-left: 0px!important;
+	}
+	.field-name-field-area-practica, .field-name-field-pais{
+	  margin-left: 0px!important;
+	}
+
+	.view-noticias{
+	  .views-row{
+	    width: 100%!important;
+		}
+	}
+	.view-blog{
+	  .view-content{
+	    display: block!important;
+			width: 90%;
+			margin: 0 auto;
+	    .views-row{
+				width: 100% !important;
+				margin-bottom: 70px;
+			}
+		}
+	}
+
+	.headBlock{
+	  text-shadow:none!important;
+	}
+
+	// field-name-field-texto-sostenibilidad
+	.cuadrosost.amarillo{
+	    background: $blanco!important;
+	}
+	.engEspToggler{
+		margin-bottom: 20px;
+	}
+	.headBlock{
+		text-shadow:none!important;
+	}
+	#block-search-form{
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 320px){
+
+}

@@ -1,0 +1,1865 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "mixins.scss";
+@import "vistas.scss";
+@import "responsive.scss";
+
+body{
+  font-family: $tipo;
+}
+ul li a{
+  text-decoration: none!important;
+}
+ul{
+  li{
+    list-style: disc;
+    margin-left: 20px;
+  }
+}
+
+strong{
+  font-weight: bold!important;
+}
+.feed-icon{
+  display: none;
+}
+.fixed {
+  width: 362px;
+  z-index: 9;
+}
+p{
+  em, i{
+    font-style: italic!important;
+  }
+}
+
+/*glyphicon-block*/
+.glyphicon-block {text-align: center; }
+.glyphicon-block .glyphicon { font-size: 48px; margin: 30px 0 0 0; }
+.glyphicon-block h4 { margin-top: 10px; }
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.glyphicon-chevron-up:before {
+    content: "⇧";
+}
+#toTop {
+    position: fixed;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #999999;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    width: 55px;
+    height: 55px;
+    bottom: 5px;
+    right: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 32px;
+    text-align: center;
+    display: none;
+    padding: 10px 0 0 2px;
+    z-index: 14;
+}
+.front{
+  #main{
+    display: none;
+  }
+}
+.search-result{
+  h3 a{
+    color:$gristxt;
+  }
+}
+.search-results{
+  .search-info{display: none}
+  .search-snippet{
+    font-size: 0.95em;
+    color: $grisParrafos;
+    padding: 7px 0;
+    strong{
+      background: yellow;
+    }
+  }
+}
+#main{
+  margin-top: 40px;
+}
+#main-content{
+  margin-bottom: 14px;
+}
+// esconder block de cambio de idioma
+#block-locale-language{
+  display: none;
+}
+.links.inline{
+  display: none!important;
+}
+
+// parrafos
+.node-type-page{
+  p{
+    line-height:19px;
+    text-align: justify;
+    margin: 14px 0;
+  }
+}
+
+.form-item.form-type-item{
+  display: none;
+}
+/// ************************************
+// esconde liidiomas
+ul.inline, ul.links.inline{
+//  display: none!important;
+}
+
+// Ancho máximo
+.anchoMaximo{
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+// menu mobil
+
+#block-block-19{
+  display: none;
+}
+
+.pfixed{
+  position: fixed;
+  z-index: 9;
+}
+
+#block-block-41,
+#block-block-25,
+#block-block-29,
+#block-block-28,
+#block-block-27,
+#block-block-26,
+#block-block-39,
+#block-block-23,
+#block-block-24{
+  position: relative;
+}
+
+.engEspToggler{
+  text-align: center;
+  img{
+    &:hover{
+      -webkit-box-shadow: 0 0 3px 3px rgba(255,255,255,1);
+      box-shadow: 0 0 3px 3px rgba(255,255,255,1);
+    }
+  }
+}
+
+///// ******
+// Blog top menús y logo blp
+///// ******
+.region-toptotal{
+  position: relative;
+}
+#block-block-2, #block-block-37{
+  position: absolute;
+  width: 100%;
+  @include flexo2;
+  .content{
+    width: 100%;
+  }
+  .topWrapperfront{
+    width:100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    @include display-flex(flex);
+  }
+  figure.logo,
+  figure.logoblanco{
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include justify-content(flex-start);
+  }
+  .menusArea{
+    width: 75%;
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include justify-content(flex-end);
+  }
+  figure.logo,
+  figure.logoblanco{
+    padding: 12px;
+    margin:0 40px;
+    width: 16%;
+    img{
+      widows: 92px;
+      height: 56px;
+    }
+  }
+  .menusArea{
+    width: 75%;
+    nav{
+      li{
+        display: inline-block;
+        text-transform: uppercase;
+        a{
+          font-size: 0.9em;
+        }
+      }
+    }
+    nav.menuPrinicipal{
+      text-align: right;
+      ul{
+        display: inline-block;
+        li{
+          margin: 0 14px;
+          a{
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            @include transicion(300ms);
+          }
+
+          .animadaLinea{
+            width: 0px;
+            height: 3px;
+            background: $verde;
+            margin-bottom: 12px;
+            @include transicion(500ms);
+          }
+
+          &:hover{
+            .animadaLinea{
+              width: 100%;
+            }
+          }
+
+        }
+      }
+    }
+    nav.menuTop{
+      padding: 14px;
+      ul{
+        li{
+          margin:0 14px;
+          a{
+            cursor:pointer;
+            @include transicion(300ms);
+            &:hover{
+              color: $verde;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// menu blanco
+.front #block-block-2,
+.front #block-block-37{
+    top: 30px;
+  .topWrapperfront{
+    background:$blanco;
+  }
+  .logoblanco{
+    display: none;
+  }
+  img.lupaLight{
+    display: none;
+  }
+  .menusArea{
+    nav.menuPrinicipal{
+      ul{
+        li{
+          a{
+            color: $gristxt;
+            &:hover{
+              color: $verde;
+            }
+          }
+          .animadaLinea{
+            width: 0px;
+            height: 3px;
+            background: $verde;
+            margin-bottom: 12px;
+            @include transicion(500ms);
+          }
+
+          &:hover{
+            .animadaLinea{
+              width: 100%;
+            }
+          }
+
+        }
+      }
+    }
+    nav.menuTop{
+      ul{
+        li{
+          a, div{
+            color: $grisClaro;
+          }
+          a{
+            @include transicion(300ms);
+            &:hover{
+              color: $verde;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// menu azul
+.not-front #block-block-2{
+  position: relative;
+  background: $azul;
+  .logo{
+    display: none;
+  }
+  img.lupaLight{
+    display: inherit;
+  }
+  img.lupaDark{
+    display: none;
+  }
+  nav.menuPrinicipal,
+  nav.menuTop{
+    ul{
+      li{
+        margin:0 14px;
+        a, div{
+          color: $blanco;
+        }
+        a{
+          @include transicion(300ms);
+          &:hover{
+            color: $verde;
+          }
+        }
+      }
+    }
+  }
+}
+
+// MENU MOBIL
+
+#block-block-19{
+  figure{
+    padding: 30px 0;
+    text-align: center;
+    img{
+    margin: 0 auto;
+    }
+  }
+  .mobilToggler{
+    color:$azul;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  nav{
+    ul{
+      li{
+        padding: 10px 0;
+        text-align: center;
+        border-bottom: 1px solid $grisClaro;
+        list-style: none;
+        margin: 0;
+        a{
+          color: $azul;
+          text-transform: uppercase;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+// block NUESTRA GENTE | AREAS PRACTICA | Blog
+
+div#selector {
+    width: 92%;
+    margin: 0 auto;
+    @include flexo2;
+    @include flex-wrap(wrap);
+    @include justify-content(space-around);
+    select{
+      background: $grisMasClaro;
+      border: none;
+      color: $grisClaro;
+      font-size: 0.85em;
+      height: 42px;
+      color:$gristxt;
+    }
+    select:nth-child(1){
+
+    }
+    select:nth-child(2),
+    select:nth-child(3),
+    select:nth-child(4),
+    select:nth-child(5){
+
+    }
+}
+
+select#nombre {
+    width: 99%;
+}
+select#areapractica, select#cargo, select#pais{
+  width: 32%;
+  margin: 7px 0;
+}
+select#areapractica {
+}
+select#cargo {
+}
+select#pais {
+}
+
+
+#block-block-3{
+  margin: 60px 0;
+  strong{
+    color: $gristxt;
+  }
+}
+
+.tresItemsFront{
+  @include flexo2;
+  @include flex-wrap(wrap);
+  .item{
+    text-align: center;
+    margin: 0 30px;
+    min-width: 250px;
+    a{
+      text-decoration: none;
+    }
+    figure{
+      margin-bottom: 20px;
+      img{
+
+      }
+    }
+    span, strong{
+      display: block;
+      font-size: 2em;
+      text-transform: uppercase;
+      line-height: 25px;
+      color: $gristxt;
+    }
+    span{
+      font-weight: 300;
+    }
+  }
+}
+figure.mensajeprincipal{
+  margin: 40px 0;
+  font-size: 1.3em;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  p{
+    text-align: center;
+  }
+  img{
+    width: 26px;
+    height: auto;
+  }
+}
+
+// OWL CAROUSEL
+#block-block-4{
+  background: $azul;
+  padding: 30px 0;
+}
+.cifras{
+  width: 1100px;
+  margin: 0 auto;
+  .owl-stage{
+    .owl-item{
+      .item{
+        text-align: center;
+        margin-top: 30px;
+        h4{
+          font-weight: bold;
+          color: $blanco;
+          font-size: 3em;
+          span{
+            color: $verde;
+            font-size: 0.8em;
+          }
+        }
+        p{
+          color: $blanco;
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
+#block-block-9, .sost-gente, .planeta{
+  .owl-nav{
+    position: absolute;
+    width: 100%;
+    top: -30px;
+    height: 0;
+    .owl-prev, .owl-next{
+        outline: none;
+      span{
+        font-size: 9em;
+        font-weight: lighter;
+        font-weight: 100;
+        color: $grisClaro;
+      }
+    }
+    .owl-next{
+      position: absolute;
+      right: 20px;
+      top: 0;
+    }
+  }
+  .owl-item{
+    img{
+      cursor: pointer;
+      &:hover{
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.sost-gente .owl-nav,
+.planeta .owl-nav{
+  top:20px;
+    .owl-item{
+      img{
+        margin: 0 auto;
+      }
+    }
+}
+
+// datos owl Carrusell
+
+#block-block-21,
+#block-block-35{
+  .content{
+    @include flexo3;
+    .datosblp{
+      position: absolute;
+      img{
+        width: 90%;
+      }
+    }
+  }
+}
+
+// Carrusell fondos costa rica
+
+.crSlidesCarr{
+  position: relative;
+  overflow: hidden;
+  img{
+    @include wyh;
+  }
+  img.fcr1{
+    position: absolute;
+    top:0
+  }
+}
+
+// Block foto superior, ancho total
+
+.page-areas-de-practica,
+.page-practice-areas,
+.page-node-435 // sostenibiliad
+{
+  .page-title{
+    display: none;
+  }
+}
+#block-block-10{
+  position: relative;
+}
+.headBlock{
+  font-weight: 700;
+  font-size: 2.2em;
+  text-transform: uppercase;
+  position: absolute;
+  top: 60%;
+  left: 15%;
+  color: white;
+  z-index: 2;
+  text-shadow:3px 3px 3px rgba($negro, 0.8);
+  &:before{
+    position:absolute;
+      bottom: 0;
+      background: $blanco;
+      height: 2px;
+      width: 180px;
+      margin-top: 14px;
+
+  }
+}
+
+figure.imgChange{
+  img{
+
+  }
+}
+
+.logCirculos{
+  margin: 30px 0;
+  ul{
+    @include flexo3;
+    @include flex-wrap(wrap);
+    li{
+      list-style: none!important;
+      margin-left: 0;
+      img{
+        @include wyh;
+      }
+    }
+  }
+}
+
+// abogados
+
+.node-type-abogados{
+  .page-title{
+    display: none;
+  }
+}
+.group-perfil-abogado-top{
+  width: 100%;
+  legend{
+    display: none;
+  }
+}
+.group-main-wrapper-abogado{
+  margin: 20px 0;
+  @include flexo3;
+  @include flex-wrap(wrap);
+  @include justify-content(start);
+  .field-name-field-foto{
+    width: 33%;
+    margin-left: 40px;
+    border: solid 14px $blanco;
+    z-index: 1;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  .group-perfil-abogado-top{
+    width: 100%;
+    position: absolute;
+  }
+}
+.node-abogados{
+  .content{
+    position: relative;
+  }
+}
+.fieldset-wrapper{
+  background: $verde;
+  padding: 20px;
+  color: $blanco;
+  width: 80%;
+  .field{
+    padding: 6px 0;
+  }
+  .field-name-field-nombre-del-abogado,
+    .field-name-field-cargo,
+    .field-name-field-especialidad {
+      margin-left: 50%;
+    }
+
+  .field-name-field-puesto,
+  .field-name-field-tel-ono,
+  .field-name-field-correo-electronico,
+  .field-name-field-v-card,
+  .field-name-field-pais,
+  .field-name-field-pais-especial{
+    margin-left: 53%;
+  }
+  .field-name-field-cargo,
+  .field-name-field-especialidad{
+    margin-bottom: 20px;
+    position: relative;
+    .field-item{
+      font-weight: bold;
+      color: $blanco;
+      &:before{
+        content: "";
+        width: 50px;
+        height: 2px;
+        background: #FFF;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+  .field-name-field-nombre-del-abogado{
+    h2{
+      font-size: 2em;
+      margin: 7px 0;
+    }
+  }
+  .field-name-field-pais, .field-name-field-pais-especial{
+    .field-items{
+      @include display-flex(flex);
+    }
+    .field-item{
+      margin-right: 40px;
+      &:before{
+        content: "";
+        background: url('/sites/default/files/images/icons/icono-pais.png');
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        margin-left: -27px;
+        margin-top: -3px;
+        background-size: 50%;
+      }
+    }
+    a{
+      color: $blanco;
+    }
+  }
+  .field-name-field-tel-ono{
+    a{
+      color: $blanco;
+      &:before{
+        content: "";
+        background: url('/sites/default/files/images/icons/icono-telefono.png');
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        margin-left: -27px;
+        margin-top: -3px;
+        background-size: 50%;
+      }
+    }
+  }
+  .field-name-field-correo-electronico{
+    p{
+      &:before{
+        content: "";
+        background: url('/sites/default/files/images/icons/icono-email.png');
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        margin-left: -27px;
+        margin-top: -3px;
+        background-size: 50%;
+      }
+    }
+  }
+  .field-name-field-correo-electronico {
+      a{
+        color: $blanco;
+      }
+  }
+  .field-name-field-v-card{
+    p{
+      &:before{
+        content: "";
+        background: url('/sites/default/files/images/icons/icono-vcard.png');
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        margin-left: -27px;
+        margin-top: -3px;
+        background-size: 50%;
+      }
+    }
+  }
+}
+
+// Excepción por David Gutiérez
+.page-node-340, .page-node-339{
+  .field-name-field-pais{
+    display: none;
+  }
+}
+
+.field-name-field-cv-completo{
+  h3{
+    color: $verde;
+    font-weight: bold;
+  }
+  p{
+    width: 96%;
+    color: $grisParrafos;
+    padding: 9px 0;
+    text-align: justify;
+    line-height: 21px;
+  }
+}
+.field-name-field-cv-completo {
+    width: 80%;
+    margin-left: 40px;
+}
+.field-name-field-area-practica{
+  padding: 14px 0;
+  margin-left: 40px;
+  .field-items{
+    display: none;
+  }
+  a{
+    color: $verde;
+    @include transicion(300ms);
+    &:hover{
+      color: lighten($verde, 20%);
+    }
+  }
+}
+
+.abgdoToggles{
+  h3{
+    padding: 14px 0;
+    cursor: pointer;
+    border-bottom: 1px solid #eae6e6;
+    @include transicion(300ms);
+    &:hover{
+      color:$azul;
+    }
+    img {
+        width: 24px;
+        height: auto;
+        float: right;
+        transform: rotateZ(90deg);
+        @include transicion(300ms);
+    }
+  }
+  .hrot{
+    img{
+    transform: rotateZ(0deg);
+    }
+  }
+  article{
+    display: none;
+    margin-bottom: 12px;
+    margin-top: 14px;
+    a{
+      color: $azul;
+      line-height: 26px;
+      @include transicion(300ms);
+      &:hover{
+        color: $verde;
+        margin-left: 8px;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.lineaBlanca{
+  width: 110px;
+  height: 2px;
+  background: #FFF;
+  position: absolute;
+  z-index: 1;
+  left: 15%;
+  top: 73%;
+}
+
+///// ******
+// Áreas prácticas
+///// ******
+.node-type-areas-practica{
+  .page-title{
+    display: none;
+  }
+}
+.node-areas-practica{
+  margin-bottom: 30px;
+  .field-name-field-areas-practica-taxo,
+  .field-name-field-descripci-n-area-practica{
+    padding: 0 20px;
+  }
+
+  .row{
+    .col-sm-8 {
+      padding-right: 0px;
+      padding-left: 0px;
+      .group-contenido-areapractica{
+        border: solid 1px $grisLineas;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .field-name-field-areas-practica-taxo{
+    margin: 14px 0;
+    .field-item{
+      color: $verde;
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+  }
+  .field-name-field-imagen-area-practica{
+    img{
+      @include wyh;
+    }
+  }
+  .field-name-field-descripci-n-area-practica{
+    p, ul li{
+      color: $grisParrafos;
+      line-height: 22px;
+      font-size: 0.9em;
+    }
+    p{
+      padding: 8px 0;
+      text-align: justify;
+    }
+  }
+  .field-name-field-quote{
+    padding: 60px 30px;
+    background: #ebebeb;
+    .field-item{
+      display: block;
+      position: relative;
+      &:before{
+        background: url('/sites/default/files/images/comilla-abre.png') no-repeat;
+        content: "";
+        height: 50px;
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+        top:-43px;
+        left:0;
+      }
+      &:after{
+          background: url('/sites/default/files/images/comilla-cierre.png') no-repeat;
+          background-position-x: right;
+          content: "";
+          height: 50px;
+          position: absolute;
+          z-index: 3;
+          width: 100%;
+          bottom:-60px;
+          left:0;
+      }
+
+    }
+      p{
+        color: $negro;
+        text-align: center;
+        font-style: italic;
+        font-size: 14px;
+        line-height: 21px;
+        strong{
+          color: $verde;
+        }
+    }
+  }
+}
+
+// páginas de TAXONOMIAS
+
+.page-taxonomy-term{
+  .page-title{
+    display: none;
+  }
+}
+
+// NOTICIAS
+
+.node-estructura-noticias{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.node-type-noticias{
+  .page-title{
+    display: none;
+  }
+  h1{
+    text-transform: uppercase;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: $verde;
+  }
+  .field-name-field-foto-noticia{
+    img{
+      @include wyh;
+    }
+  }
+
+  .field-name-field-autor-noticia,
+  .field-name-field-categoria-noticia a,
+  .field-name-field-fecha-noticia p{
+    font-size: 0.8em;
+    color: $grisClaro;
+  }
+
+  .field-name-field-categoria-noticia{
+    text-align: center;
+    margin: 20px 0;
+    a{
+
+    }
+  }
+
+  .field-name-field-autor-noticia{
+    margin: 20px 0;
+  }
+  .field-name-field-texto-noticia{
+    p{
+      text-align: justify;
+      margin: 12px 0;
+      line-height: 21px;
+      color: $grisParrafos;
+    }
+  }
+  .field-name-field-fecha-noticia{
+    margin-bottom: 20px;
+    p{
+
+    }
+  }
+}
+
+// Boletín
+#block-simplenews-57{
+  h2{
+    display: block;
+    padding: 12px 53px;
+    background: url('/sites/default/files/images/sobre-suscribe.png'), url('/sites/default/files/logo-suscribe.png');
+    background-size: 33px 29px, 46px 31px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 15px 9px, 100% 5px;
+    text-transform: uppercase;
+    padding: 14px;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: $grisClaro;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .content{
+    text-align: center;
+  }
+}
+
+.block-simplenews{
+  background: $grisMasClaro;
+  padding: 40px 0;
+  text-align:  center;
+  p{
+    text-transform: uppercase;
+    padding: 14px;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: $grisClaro;
+  }
+  .simplenews-subscribe{
+    > div{
+      @include flexo3;
+      @include flex-wrap(wrap);
+      .form-item-mail{
+        margin: 5px 12px 20px 12px;
+        width: 100%;
+      }
+    }
+  }
+  .form-item-mail{
+
+  }
+  #edit-mail{
+    height: 40px;
+    @include border-radius(20px);
+    border: solid 2px $grisClaro;
+  }
+  .form-submit{
+    @extend .botones
+  }
+}
+
+// Reconocimientos
+
+section.reconocimientos{
+  p.introRec{
+    max-width: 900px;
+    margin: 20px auto;
+    font-size: 0.85em;
+    text-align: center;
+    line-height: 20px;
+  }
+  .wrapReconocimientos{
+    @include display-flex(flex);
+    @include justify-content(space-around);
+    @include flex-wrap(wrap);
+  }
+  .item{
+    width: 45%;
+    min-width: 240px;
+    margin: 0 10px 14px 10px;
+    figure{
+      text-align: center;
+      img{
+        @include wyh;
+        max-width: 150px;
+      }
+    }
+    .title{
+      text-transform: uppercase;
+      font-size: 1.0em;
+      margin: 24px 0 0px 0;
+      text-align: center;
+      font-weight: bold;
+      height: 56px;
+    }
+    .line{
+      width: 120px;
+      height: 2px;
+      background: $azul;
+    }
+    p{
+      margin: 12px 0;
+      color: $gristxt;
+      font-size: 0.85em;
+      line-height: 20px;
+    }
+  }
+}
+
+// Estructura en Blog
+.node-type-blog,
+.node-type-noticias{
+  .page-title{
+    display: none;
+  }
+  .field-name-field-foto-blog{
+    img{
+      @include wyh;
+    }
+  }
+  .field-name-field-fecha{
+    text-align: center;
+    color: $gristxt;
+  }
+  .field-name-field-titulo p,
+  .field-name-field-titulo-noticia .field-item{
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+      margin: 20px 0;
+  }
+
+  .field-name-field-categoria,
+  .field-name-field-categoria-noticia{
+    text-align: center;
+    margin-top: 20px;
+    a{
+      color: $gristxt;
+      display: block;
+    }
+  }
+  .field-name-field-fecha-noticia{
+    text-align: center;
+  }
+  .field-name-field-texto{
+    p, li{
+      text-align: justify;
+      justify-content: center;
+      margin: 12px 0;
+      font-size: 0.85em;
+      line-height: 21px;
+      color: $grisParrafos;
+    }
+    li{
+      margin-left: 20px;
+    }
+  }
+}
+
+#block-block-30,
+#block-block-31,
+#block-block-32{
+  p{
+    img{
+      @include transicion(300ms);
+      &:hover{
+        @include transform(scale(1.2));
+      }
+    }
+  }
+}
+
+
+// La Firma
+
+.page-node-1,
+.page-node-35,
+.page-node-64,
+.page-node-65,
+.page-node-66{
+  .page-title{display: none}
+  .field-name-body{
+    max-width: 800px;
+    margin: 0 auto;
+    h2{
+      color: $verde;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+  }
+}
+
+#block-block-20{
+  background: $blanco;
+  @include transition(500ms);
+  position: absolute;
+  top:50px;
+  .botonesBLP{
+    ul{
+      li{
+        background: $grisMasClaro;
+        list-style: none;
+        margin: 0 0 2px 0;
+        padding: 23px 50px 24px 56px;
+          a{
+            color: $gristxt;
+            font-size: 17px;
+            font-weight: bold;
+            text-transform: uppercase;
+            @include transicion(300ms);
+            &:hover{
+              color: $verde;
+            }
+          }
+      }
+    }
+  }
+
+    .btnBLP{
+      text-align: center;
+      .wrapGoContact{
+        font-weight: bolder;
+        text-decoration: none;
+        padding: 0 25px;
+        background: $verde;
+        width: 100%;
+        cursor: pointer;
+        @include flexo3;
+        @include justify-content(space-between);
+        @include transicion(500ms);
+        margin-top: 20px;
+        .flecha{
+          color: white;
+          font-size: 1.9em;
+          float: right;
+          border-left: solid 1px $blanco;
+          padding: 25px 0 25px 20px;
+          @include transicion(500ms);
+        }
+        &:hover{
+          background: lighten($verde, 20%);
+          .flecha{
+            padding: 25px 30px 25px 20px;
+          }
+          a{
+            margin-left: 30px;
+          }
+        }
+      }
+      a{
+        font-size: 17px;
+        line-height: 25px;
+        color: $blanco;
+        text-align: left;
+        text-transform: capitalize;
+        text-decoration: none;
+        @include transicion(500ms);
+        a:hover{
+          background: lighten($verde, 20%);
+        }
+      }
+    }
+}
+
+
+// Bloque contactenos
+
+#block-block-16{
+  table{
+    color: $gris;
+    font-size: 0.9em;
+    td{
+      vertical-align:middle;
+    }
+  }
+}
+.botones{
+  background: $verde;
+  color: $blanco;
+  border: 1px solid $verde;
+  text-transform: uppercase;
+  font-weight: bold;
+      height: 60px;
+      letter-spacing: 0.8px;
+      line-height: 60px;
+      font-size: 18px;
+      padding: 0 53px;
+  cursor:pointer;
+  @include border-radius(30px);
+  @include transicion(500ms);
+  &:after{
+    content:"➔";
+    margin-left: 30px;
+    @include transicion(500ms);
+  }
+  &:hover{
+    background: $blanco;
+    color: $verde;
+    &:after{
+      margin-left: 10px;
+    }
+  }
+}
+.botonesp{
+  @extend .botones;
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 40px;
+  @include border-radius(20px);
+  a{
+    color: $blanco;
+    font-size: 14px;
+  }
+  &:after{
+    content: "⇩";
+    position: absolute;
+    right: 12px;
+    top: 0;
+  }
+  &:hover{
+    a{
+      color: $verde;
+    }
+  }
+}
+.btnsimple{
+  @extend .botones;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 26px;
+  @include border-radius(20px);
+  a{
+    color: $blanco;
+    font-size: 14px;
+  }
+  &:hover{
+    margin-bottom: 12px;
+    a{
+      color: $verde;
+    }
+  }
+}
+// Webforms
+
+.block-webform{
+  h2{
+    display: none;
+  }
+  input.webform-submit{
+    @extend .botones;
+  }
+}
+// sostenibilidad
+.page-node-608, .page-node-320{
+  .page-title{
+    text-align: center;
+    font-size: 2em;
+    margin: 16px 0;
+  }
+}
+.webform-client-form-320, .webform-client-form-608 {
+    max-width: 500px;
+    margin: 0 auto;
+    input.webform-submit{
+      @extend .botones;
+    }
+}
+
+#webform-client-form-42,
+#webform-client-form-517{
+  text-align: left;
+  #edit-submitted-pais-aplica,
+  #edit-submitted-country-that-you-apply{
+    @include display-flex(flex);
+    @include justify-content(start);
+    @include flex-wrap(wrap);
+    .form-item-submitted-pais-aplica,
+    .form-item-submitted-country-that-you-apply{
+      width: 32%;
+    }
+  }
+  .webform-component--cv{
+    label{
+      text-align: center;
+      margin: 12px 0;
+    }
+  }
+  .form-managed-file{
+    @include flexo2;
+    @include justify-content(start);
+  }
+  .description{
+    margin: 14px 0;
+  }
+  .form-actions{
+    text-align: center;
+  }
+}
+
+
+.node-type-estructura-contactenos{
+  .page-title{display: none}
+}
+.page-node-37{
+  .block-system-main{
+    margin: 0 auto;
+    max-width: 800px;
+  }
+}
+
+#block-block-17{
+  text-align: center;
+  padding: 30px 0;
+  margin: 30px 0;
+  border-top: solid 1px $verde;
+  border-bottom: solid 1px $verde;
+  .aplicar{
+    @extend .botones;
+    display: inline-block;
+  }
+}
+
+// Sección Oficinas
+.page-node-38, .page-node-226{
+  .page-title{
+    display: none;
+  }
+}
+
+section.localespaises {
+  margin-bottom: 40px;
+  article.localesPais {
+    h2{
+      position:relative;
+      font-size: 1.2em;
+      padding: 14px;
+      border-bottom: solid 1px $grisClaro;
+      cursor:pointer;
+      @include transicion(300ms);
+      &:hover{
+        background: $azul;
+        color: $blanco;
+        img{
+          filter: brightness(0%) contrast(200%) invert(100%);
+          -webkit-filter: brightness(0%) contrast(200%) invert(100%);
+        }
+      }
+    }
+    .mas{
+      &:after{
+        content:"+";
+        position: absolute;
+        right:20px;
+        top:12px;
+      }
+    }
+    h2.menos{
+      &:after{
+        content:"-";
+        position: absolute;
+        right:20px;
+        top:12px;
+      }
+    }
+    h3{
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 12px 0;
+      font-size: 1em;
+    }
+    p{
+      font-size: 0.85em;
+      color:$gristxt;
+      margin: 14px 0;
+    }
+    .colapsible{
+
+    }
+    .mapas{
+      @include flexo2;
+      @include flex-wrap(wrap);
+      .item{
+        width: 30%;
+        min-width: 240px;
+        margin: 16px;
+        iframe{
+
+        }
+        p{
+
+        }
+      }
+    }
+  }
+}
+
+// submenu
+.front #block-block-18{
+  top:110px;
+  text-align: center;
+  .content{
+    max-width: 1100px;
+    p{
+      text-align: left;
+    }
+  }
+}
+#block-block-18{
+  display: none;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  .content{
+    display: inline-block;
+    background: rgba(255,255,255,0.8);
+    width: 100%;
+    padding: 20px 0;
+  }
+  .wrapSubmenu{
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    .wrapInnerSubmenu {
+      margin-top: 20px;
+      min-width: 600px;
+      @include display-flex(flex);
+      @include justify-content(space-around);
+      figure{
+        padding: 0 10px;
+        border-right: solid 1px $grisMasClaro;
+        h3{
+          text-align: left;
+        }
+        p{
+          font-size: 0.8em;
+          color: $gristxt;
+          line-height: 18px;
+        }
+        .animadaLinea{
+          width: 0px;
+          height: 3px;
+          background: $verde;
+          margin-bottom: 12px;
+          @include transicion(500ms);
+        }
+        &:hover{
+          .animadaLinea{
+            width: 50px;
+          }
+        }
+      }
+      h3{
+        color: $azul;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+        a{
+          color:$azul;
+          text-decoration: none;
+          &:hover{
+            color: $verde;
+          }
+        }
+      }
+    }
+  }
+}
+
+// reconocimientos
+.page-node-9{
+  .page-title{
+    display: none;
+  }
+}
+
+// buscar
+
+#idbuscar{
+
+}
+#block-search-form{
+  display: none;
+  float: left;
+}
+#block-search-form{
+    margin-right: 30px;
+    margin-top: -9px;
+    background: white;
+    padding: 0 10px;
+    border: solid 1px $grisMasClaro;
+    input#edit-search-block-form--2{
+      background: white;
+      color: $gristxt;
+      border: none;
+      padding: 5px 12px;
+      font-size: 0.8em;
+    }
+    input#edit-submit{
+      background: url('/sites/default/files/lupa.png');
+      background-position: 4px 6px;
+      background-repeat: no-repeat;
+      border: none;
+      width: 18px;
+    }
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background-color: $blanco !important;
+  background-image: none !important;
+  color: $gristxt !important;
+}
+
+// Slider
+
+.wrapSliderTit {
+    position: absolute;
+    left: 16%;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    @include flexo3;
+    @include display-flex(flex);
+    @include justify-content(start);
+    @include flex-wrap(wrap);
+    @include align-content(center);
+    .peqTit, .grnTit{
+      color: $blanco;
+      width:100%;
+      text-transform: uppercase;
+    }
+    .grnTit{
+      font-weight: bold;
+      font-size: 2em;
+      @include text-shadow(2px 2px 2px rgba(0,0,0,0.8));
+    }
+    .peqTit{
+      font-weight: 100;
+      font-size:1.5em;
+      max-width: 60%;
+      min-width: 300px;
+    }
+    .raya{
+      width: 100%;
+      height: 2px;
+      margin: 20px auto 0 auto;
+      a{
+        color: $blanco;
+        margin: 0 auto;
+        background: $verde;
+        padding: 8px 12px;
+        text-decoration: none;
+        @include border-radius(4px);
+        @include transicion(300ms);
+        &:hover{
+          background: lighten($verde, 30%);
+        }
+      }
+    }
+}
+// FOOTER
+
+#footer{
+  background: $azul;
+  padding: 30px 0;
+  .row{
+    @include flexo2;
+    @include flex-wrap(wrap);
+    .col-md-3:nth-child(1),
+    .col-md-3:nth-child(2),
+    .col-md-3:nth-child(3){
+      border-right: solid 1px $blanco;
+    }
+    .col-md-3:nth-child(3){
+      text-align: center;
+    }
+  }
+  nav{
+    ul{
+      li{
+        list-style: none;
+        a{
+          color: $blanco;
+          display: block;
+          @include transicion(300ms);
+        }
+      }
+    }
+  }
+  .block{
+    span, a{
+      color: $blanco;
+      font-size: 0.9em;
+      line-height: 22px;
+    }
+    a{
+      color: $blanco;
+      @include transicion(300ms);
+      &:hover{
+        color: $verde;
+      }
+    }
+    .trabajeconnosotros{
+      color: $blanco;
+      text-transform: uppercase;
+      padding: 10px 16px;
+      border: solid 1px $blanco;
+      display: inline-block;
+      cursor:pointer;
+      @include transicion(300ms);
+      &:hover{
+        background: $verde;
+        color:$blanco;
+        border: solid 1px $verde;
+      }
+    }
+  }
+
+  .wrapRedesSociales{
+    @include display-flex(flex);
+    @include justify-content(start);
+    figure{
+      margin-left: 4px;
+      img{
+        width: 30px;
+      }
+    }
+  }
+}
+
+// sostenibilidad
+
+.page-node-88 {
+  .page-title {
+    display: none;
+  }
+}
+.cuadrosost{
+  position: absolute;
+  width: 648px;
+  height: 390px;
+  content: "";
+  z-index: -2;
+  top: 27%;
+}
+.cuadrosost.amarillo{
+    background: #ffcc4d;
+    left: 0;
+}
+.cuadrosost.celeste{
+    background: #81cbee;
+    right: 0;
+}
+.cuadrosost.gris{
+  background: #ededed;
+  left: 0;
+}
+
+// tipo de group-contenido- sostenibilidad
+
+.node-type-sotenibilidad{
+  .page-title{display: none}
+
+  .field-name-title{
+    padding: 20px 22px;
+    border-left: solid 1px $grisMasClaro;
+    border-right: solid 1px $grisMasClaro;
+    h2{
+      color: $rojo;
+      font-weight: bold;
+      font-size: 1.3em;
+    }
+  }
+  .field-name-field-imagen-principal{
+    img{
+      @include wyh;
+    }
+  }
+  .field-name-field-texto-sostenibilidad{
+    border-left: solid 1px $grisMasClaro;
+    border-right: solid 1px $grisMasClaro;
+    border-bottom: solid 1px $grisMasClaro;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    p, li {
+        font-size: 0.9em;
+        line-height: 19px;
+    }
+    p{
+      padding: 22px 0;
+    }
+    h2{text-align: center;}
+    figure{
+      text-align: center;
+      > img{
+        display: inline-block;
+        margin: 12px;
+      }
+    }
+  }
+}
+
+// excepciones especiales
+
+#node-370,
+#node-369,
+#node-388,
+#node-387,
+#node-307,
+#node-306 {
+  .field-name-field-cargo{
+    display:none;
+  }
+}
+
+
+
+#subfooter{
+  background: $azul;
+}
+#block-block-43{
+    padding: 12px 0;
+    p{
+      text-align: center;
+      color: $grisClaro;
+    }
+}

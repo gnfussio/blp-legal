@@ -1,0 +1,817 @@
+@import "compass/css3";
+@import "mixins.scss";
+
+.view-areas-practicas,
+.view-areas-practicas-en-ingles {
+  background: $grisMasClaro;
+  padding: 20px;
+  @include border-radius(12px);
+  .views-row{
+    border-bottom: solid 1px $verde;
+    span{
+      a{
+        display: block;
+        padding: 6px 0;
+        color: $gristxt;
+        font-size: 0.85em;
+        &:hover{
+
+        }
+      }
+    }
+    span a.active{
+      color: $verde!important;
+      font-weight: bold;
+    }
+  }
+}
+
+// NOTICIAS
+
+.page-taxonomy-term{
+  .block-views{
+    > h2{display: none;}
+  }
+}
+
+#block-views-noticias-block{
+  padding: 40px 0;
+  h2{
+    text-align: center;
+    font-weight:300;
+    color: $grisClaro;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    padding: 30px;
+  }
+}
+.view-noticias{
+  .view-content{
+    @include flexo2;
+    @include flex-wrap(wrap);
+  }
+  .views-row{
+    width: 28%;
+    min-width: 290px;
+    margin: 0 8px;
+    text-align: center;
+    position: relative;
+    .views-field-field-foto-noticia,
+    .views-field-field-foto-blog{
+      overflow: hidden;
+      height: 230px;
+      img{
+        width: 170%;
+        height: auto;
+        @include transicion(300ms all ease-in-out);
+      }
+    }
+    .views-field-field-categoria-noticia{
+      .field-content{
+        padding: 8px;
+        background: $verde;
+        color: $blanco;
+        text-transform: uppercase;
+      }
+    }
+    .views-field-view-node{
+      float: left;
+      margin:12px 0;
+      span{
+        a{
+          color: $verde;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .views-field-title{
+      a{
+        display: block;
+        margin: 14px auto;
+        color: $gristxt;
+      }
+    }
+    .views-field-field-texto-noticia{
+      margin: 14px 0;
+      .field-content {
+        color: $gristxt;
+        font-weight: bold;
+        font-weight: 700;
+        font-size: 0.9em;
+        line-height: 20px;
+        text-align: left;
+      }
+    }
+    .views-field-field-fecha-noticia{
+      p{
+        font-size: 0.8em;
+        color: $gristxt;
+        margin-bottom: 20px;
+      }
+    }
+    .views-field-field-texto{
+      .field-content{
+        padding: 12px 0;
+      }
+    }
+    // hover del views-row
+    &:hover{
+      .views-field-field-foto-noticia,
+      .views-field-field-foto-blog{
+        img{
+          @include transform(scale(1.2));
+        }
+      }
+    }
+  }
+}
+
+// view-destacados
+
+.view-destacados{
+
+}
+
+
+
+// Owl carrusell Clientes
+
+.clientes{
+  max-width: 1100px;
+  margin: 30px auto;
+  .item{
+    text-align: center;
+    img{
+      width: 100%;
+      height: auto;
+      max-width: 120px;
+      margin: 0 auto;
+    }
+  }
+}
+.crSlidesCarr{
+  .datosblp {
+      position: absolute;
+      height: 100%;
+      width:100%;
+      z-index: 2;
+      top: 0;
+        .container{
+          @include flexo3;
+          @include flex-wrap(wrap);
+          height: 100%;
+        }
+      img{
+        width: 22%;
+        height: auto;
+      }
+  }
+}
+
+// LISTA DE TAXONOMIAS AREAS PRACTICAS
+
+#block-views-areas-practicas-block,
+#block-views-areas-practicas-en-ingles-block{
+  h2{
+    display: none;
+  }
+}
+
+.view-listado-de-areas-practicas,
+.view-listado-de-areas-practicas-ingl-s{
+  .view-content{
+    @include flexo2;
+    @include flex-wrap(wrap);
+    .views-row{
+      margin: 18px;
+      padding: 10px;
+      width: 20%;
+      min-width: 230px;
+      height: 70px;
+      border: solid 2px $azul;
+      text-align: center;
+      cursor: pointer;
+      @include flexo3;
+      @include transicion(300ms);
+      a{
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 0.8em;
+        color: $azul;
+        font-weight: bold;
+        font-weight: 700;
+      }
+      &:hover{
+        border: solid 2px $verde;
+        a{
+          color: $verde;
+        }
+      }
+    }
+  }
+}
+
+// Block con filtado de abogados por taxonomías
+
+.contextual-links-region{
+  h2{
+    color: $verde;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+}
+#block-views-ff35640afdd3e52a3b8c2ba0e75c6861{
+  h2{
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: $verde;
+  }
+}
+
+// abogados ligados a taxonomias areas practicas
+
+.view-abogados-ligado-a-taxonomias{
+  margin-top: 30px;
+  h3.contactos-clave{
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 2em;
+    color: $verde;
+  }
+  .view-content{
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+    .views-row{
+      margin: 0 12px 14px 12px;
+    }
+    .masdecinco{
+      min-width: 215px;
+      width: 24%;
+    }
+    .cinco{
+      min-width: 160px;
+      width: 17.1%;
+    }
+    .menosdecinco{
+      min-width: 200px;
+      width: 20%;
+    }
+  }
+  .views-field-field-foto{
+    a{
+      display: block;
+      img{
+        width: 100%;
+        height: auto;
+        &:hover{
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  .views-field-title,
+  .views-field-field-cargo,
+  .views-field-field-especialidad{
+    margin: 8px 0;
+  }
+  .views-field-title{
+    a{
+      color: $azul;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+  .views-field-field-area-practica{
+    display: none;
+  }
+  .views-field-field-cargo,
+  .views-field-field-especialidad{
+    font-size: 0.85em;
+    color: $azul;
+    text-transform: uppercase;
+  }
+  .views-field-field-pais{
+    .field-content{
+      font-size: 0.9em;
+      color: #757575;
+    }
+  }
+}
+
+// Nuestra GENTE
+.page-nuestra-gente,
+.page-our-people-english,
+.page-our-people{
+  .page-title {
+    display: none;
+  }
+}
+
+.view-abogados,
+.view-abogados-ingles,
+.view-our-people {
+  .view-content{
+    @include flexo2;
+    @include flex-wrap(wrap);
+    .views-row{
+      width: 28%;
+      min-width: 250px;
+      margin:20px;
+      .views-field-field-foto{
+        img{
+          @include wyh;
+        }
+      }
+      .views-field-title{
+        margin: 14px 0;
+        a{
+          color: $azul;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
+      .views-field-field-cargo,
+      .views-field-field-especialidad{
+        text-transform: uppercase;
+        color: $azul;
+        font-size: 0.9em;
+      }
+      .views-field-field-especialidad{
+        margin-top: 7px;
+      }
+      .views-field-field-pais{
+        .field-content{
+          font-size: 0.9em;
+          color: $azul;
+          padding: 5px 0;
+        }
+      }
+      .views-field-field-area-practica{
+        display: none;
+      }
+    }
+    // limita a 12 los abogados en el display
+     /*.views-row:nth-child(12) ~ .views-row {
+      display: none;
+    }*/
+  }
+}
+
+// Selector de la Vista de Fitrado de visitantes
+.view-our-people,
+.view-abogados-ingles,
+.view-abogados{
+  .view-filters{
+    .views-exposed-widgets{
+      width: 92%;
+      margin: 20px auto 0 auto;
+      @include flexo2;
+      @include flex-wrap(wrap);
+      @include justify-content(center);
+      .views-exposed-widget{
+        width: 31.8%;
+        margin: 0 7px;
+        padding: 0;
+        select{
+          background: $grisMasClaro;
+          border: none;
+          color: $grisClaro;
+          font-size: 0.85em;
+          width: 100%;
+          height: 42px;
+          color:$gristxt;
+        }
+        label{
+          text-align: center;
+          color:$grisClaro;
+        }
+      }
+      .views-exposed-widget:nth-child(1){
+        width: 100%;
+        margin-bottom: 20px;
+        input{
+          display: block;
+          width: 100%;
+          height: 34px;
+          padding: 6px 12px;
+          font-size: 14px;
+          line-height: 1.4;
+          color: #555;
+          background-image: none;
+          background-color: $blanco;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+          @include transition(ease-in-out .15s);
+          &:focus{
+            border-color: #66afe9;
+            outline: 0;
+            @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6));
+          }
+        }
+      }
+      .views-exposed-widget.views-submit-button,
+      .views-exposed-widget.views-reset-button{
+        width: 20%;
+        text-align: center;
+        input{
+          background: $verde;
+          color: $blanco;
+          border: 1px solid $verde;
+          text-transform: uppercase;
+          font-weight: bold;
+          height: 49px;
+          letter-spacing: 0.8px;
+          line-height: 48px;
+          font-size: 12px;
+          padding: 0 30px;
+          cursor: pointer;
+          -moz-border-radius: 30px;
+          -webkit-border-radius: 30px;
+          border-radius: 30px;
+          @include transicion(500ms);
+          &:hover{
+            background: #FFF;
+            color: $verde;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// noticias - masonry
+
+.view-noticias-page{
+  .view-content{
+    width:100%!important;
+    @include flexo2;
+    @include justify-content(space-around);
+  }
+}
+#block-views-noticias-page-block{
+  > h2{
+    display: none;
+  }
+}
+.node-type-estructura-noticias{
+  .page-title{
+    display: none;
+  }
+}
+
+
+// block de taxonomias lateral
+
+#block-views-categorias-de-noticias-block,
+#block-views-categor-as-blog-block,
+#block-views-destacados-noticias-block,
+#block-views-be98c404b774674971e650fedf84d866 {
+  h2{
+    display: block;
+    text-transform: uppercase;
+    color: $gristxt;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2em;
+    margin: 12px 0;
+    padding: 0;
+  }
+}
+.view-categorias-de-noticias,
+.view-categor-as-blog,
+.view-destacados-noticias,
+.view-categorias-de-noticias-novedades-y-eventos {
+  .view-content{
+    .views-row:nth-child(1){
+      border-top: solid 1px $grisClaro;
+    }
+    .views-row{
+      border-bottom: solid 1px $grisClaro;
+      margin-bottom: 20px;
+      span, a{
+        display: block;
+      }
+      span{
+        a{
+          text-transform: uppercase;
+          color: $gristxt;
+          margin: 12px 0;
+          text-decoration: none;
+          @include transicion(300ms);
+          &:hover{
+            color: $verde;
+          }
+        }
+      }
+    }
+  }
+}
+
+// blog page
+.node-type-estructura-blog,
+.node-type-blog-humanizando-mentes,
+.node-type-blog-360-law {
+  .page-title {
+    display: none;
+  }
+}
+#block-views-blog-block,
+#block-views-blog-brand-360-block,
+#block-views-blog-humanizando-mentes-block{
+  > h2{
+    display: none;
+  }
+}
+
+.view-blog,
+.view-blog-brand-360,
+.field-name-blog-humanizando-mentes,
+.view-noticias-page,
+.view-noticias-ligado-a-taxonomias {
+  > h2{
+    display: none;
+  }
+  #edit-field-pais-blog-tid-wrapper,
+  #edit-field-categoria-tid-wrapper { // ajuste al selector de los blogs
+    width: 100%;
+  }
+  .view-content{
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include justify-content(space-around);
+    .views-row{
+      width: 32%;
+      margin-bottom: 20px;
+      position: relative;
+      .views-field-field-foto-blog {
+        overflow: hidden;
+        img{
+          @include transition(500ms);
+        }
+        &:hover{
+          img{
+            @include transform(scale(1.2));
+          }
+        }
+      }
+    }
+    .views-row{
+      .views-field-view-node{
+        float: left;
+        margin:12px 0;
+        span{
+          a{
+            color: $verde;
+            text-transform: uppercase;
+          }
+        }
+      }
+      .views-field-field-foto-blog {
+        overflow: hidden;
+      }
+      .views-field-field-foto-noticia{
+        p{
+          img{
+            @include wyh;
+          }
+        }
+      }
+    }
+    .views-row:nth-child(1),
+    .views-row:nth-child(2){
+      width: 48%;
+    }
+    .views-row:nth-child(3){
+      width: 100%;
+      .views-field-field-foto-blog{
+        max-height: 250px;
+        overflow: hidden;
+      }
+    }
+    .views-field-field-foto-blog{
+      overflow: hidden;
+      img{
+        @include wyh;
+      }
+    }
+    .views-field-title{
+      a{
+        color: $negro;
+        font-size: 0.8em;
+        text-decoration: none;
+        font-weight: bold;
+        display: block;
+        margin: 10px 0;
+      }
+    }
+    .views-field-field-texto{
+      p{
+        font-size: 0.8em;
+        line-height: 16px;
+        color: $gristxt;
+      }
+      .views-more-link{
+        display: block;
+        margin: 12px 0;
+        color: $verde;
+        text-transform: uppercase;
+      }
+    }
+    .views-field-field-categoria{
+
+    }
+    .views-field-field-categoria,
+    .views-field-field-categoria-noticia,
+    .views-field-field-categoria-360 {
+      background: $verde;
+      color: $blanco;
+      padding: 8px 12px;
+      margin-top: -3px;
+      a, .field-content {
+        color: $blanco;
+        text-transform: uppercase;
+        font-size: 0.9em;
+        text-decoration: none;
+      }
+    }
+    .views-field-view-node{
+      span{
+        a{
+          color: $verde;
+        }
+      }
+    }
+  }
+  // selector de filtrado de Blog
+
+  .views-exposed-widgets{
+    @include flexo3;
+    @include flex-wrap(wrap);
+    margin-bottom: 40px;
+    .views-exposed-widget{
+      label{
+        text-align: center;
+        color:$grisClaro;
+      }
+      select{
+        background: $grisMasClaro;
+        border: none;
+        color: $grisClaro;
+        font-size: 0.85em;
+        width: 100%;
+        height: 42px;
+        color:$gristxt;
+      }
+      input{
+        background: $verde;
+        color: $blanco;
+        border: 1px solid $verde;
+        text-transform: uppercase;
+        font-weight: bold;
+        height: 49px;
+        letter-spacing: 0.8px;
+        line-height: 48px;
+        font-size: 12px;
+        padding: 0 30px;
+        cursor: pointer;
+        -moz-border-radius: 30px;
+        -webkit-border-radius: 30px;
+        border-radius: 30px;
+        @include transicion(500ms);
+        &:hover{
+          background: #FFF;
+          color: $verde;
+        }
+      }
+    }
+  }
+}
+
+// Vista blog
+
+.view-blog-ligado-a-taxonomias{
+  .view-content{
+    @include flexo2;
+    @include flex-wrap(wrap);
+    .views-row{
+      width: 30%;
+      min-width: 230px;
+      margin: 0 7px 30px 7px;
+      .views-field-field-foto-blog{
+        overflow: hidden;
+        img{
+          @include wyh;
+          @include transicion(300ms);
+        }
+        &:hover{
+          img{
+            @include transform(scale(1.2));
+          }
+        }
+      }
+      .views-field-title{
+        text-align: center;
+        padding: 12px 0;
+        a{
+          text-decoration: none;
+          color: $verde;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+// Blogs destacados
+
+.field-name-destacados-blog{
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: solid 1px $gris;
+  h2{
+    color: $gristxt;
+  }
+  .views-row{
+    margin-bottom: 20px;
+    .views-field-title{
+      span{
+        a{
+          text-decoration: none;
+          display: block;
+          color: $gris;
+          font-weight: bold;
+          font-weight: 700;
+          font-size: 0.8em;
+          margin: 5px 0;
+        }
+      }
+    }
+    .views-field-field-foto-blog{
+      img{
+        @include wyh;
+      }
+    }
+  }
+}
+
+#block-block-19{
+  .nvgMobil{
+    ul{
+      li{
+        ul{
+          li{
+            a{
+              font-size: 0.9em;
+              color: $grisClaro;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// noticias destacadas en NOTICIAS
+
+#block-views-destacados-noticias-block{
+  margin-top: 30px;
+  h2{
+    color: $gristxt;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+.view-destacados-noticias{
+  .views-row{
+    margin-bottom: 20px;
+  }
+  .views-field-field-foto-noticia{
+    p{
+      img{
+        @include wyh;
+      }
+    }
+  }
+  .views-field-title{
+    padding: 8px 0;
+    span{
+      a{
+        color: $gristxt;
+        text-decoration: none;
+        font-weight: 12px;
+        @include transicion(300ms);
+        &:hover{
+          color: $verde;
+        }
+      }
+    }
+  }
+}

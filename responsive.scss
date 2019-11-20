@@ -303,6 +303,20 @@
 }
 
 @media only screen and (max-width: 480px){
+
+	.view-our-people .view-filters .views-exposed-widgets .views-exposed-widget{
+		width: 100%!important;
+	}
+	.view-our-people .view-filters .views-exposed-widgets .views-exposed-widget.views-submit-button{
+		width: 100%!important;
+	}
+	.views-exposed-widgets{
+		.views-exposed-widget{
+			width: 100%!important;
+			margin-bottom: 8px;
+		}
+	}
+
 	#block-block-20{
 		display: none!important;
 	}
@@ -403,10 +417,6 @@
 		}
 	}
 
-	.headBlock{
-	  text-shadow:none!important;
-	}
-
 	// field-name-field-texto-sostenibilidad
 	.cuadrosost.amarillo{
 	    background: $blanco!important;
@@ -416,11 +426,13 @@
 	}
 	.headBlock{
 		text-shadow:none!important;
+		font-size: 1.5em!important;
 	}
 	#block-search-form{
 		display: none;
 	}
 }
+
 
 @media only screen and (max-width: 320px){
 

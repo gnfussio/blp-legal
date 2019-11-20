@@ -578,11 +578,9 @@
         overflow: hidden;
       }
       .views-field-field-foto-noticia{
-        p{
           img{
             @include wyh;
           }
-        }
       }
     }
     .views-row:nth-child(1),
